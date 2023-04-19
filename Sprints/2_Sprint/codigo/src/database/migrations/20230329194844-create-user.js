@@ -17,6 +17,10 @@ module.exports = {
       senha: {
         type: Sequelize.STRING
       },
+      status: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: true,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
