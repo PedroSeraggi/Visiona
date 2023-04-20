@@ -616,6 +616,10 @@ b{
   tr:nth-child(even) {
     background-color: #f2f2f2;
   }
+
+  tr.inativo {
+    background-color: #ffcccc;
+  }
   
   td:first-child, th:first-child {
     text-align: center;
@@ -642,8 +646,22 @@ b{
     content: "";
   }
 
-  .red-row {
-    background-color: #d60808;
+  .inactive {
+    background-color: #ff00003b;
+  }
+
+  .Pesquisa{
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    width: 200px;
+    margin-bottom: 10px;
+  }
+  
+  .BarraPesq{
+    position: absolute;
+    top: 30%;
+    left:25%;
   }
   /*====================*/
 
