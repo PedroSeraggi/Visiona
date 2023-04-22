@@ -20,8 +20,15 @@ function List() {
     fetchData();
   }, []);
 
+  if (users.length === 0) {
+    return <div>Carregando...</div>;
+  }
   const getStatus = (status) => {
     return status ? 'Ativo' : 'Inativo';
+  };
+
+  const getAdm = (adm) => {
+    return adm ? 'Administrador' : 'Comum';
   };
 
   const handleDelete = async (id) => {
@@ -91,6 +98,7 @@ function List() {
             <th>ID</th>
             <th>Nome</th>
             <th>Email</th>
+            <th>Conta</th>
             <th>Status</th>
             <th>Ações</th>
           </tr>
@@ -101,6 +109,7 @@ function List() {
               <td>{user.id}</td>
               <td>{user.nome}</td>
               <td>{user.email}</td>
+              <td>{getAdm(user.adm)}</td>
               <td>{getStatus(user.status)}</td>
               <td>
                 <button onClick={() => handleViewUser(user)}>
